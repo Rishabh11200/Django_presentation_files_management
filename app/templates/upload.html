@@ -1,0 +1,19 @@
+
+
+{% extends 'home.html' %}
+{% block content %}
+<div class="row justify-content-center mb-3">
+	<div class="col-md-5">
+		<h4 class="text-center alert alert-info">Students Upload Your CEC</h4>
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+		<label>Topic Name&nbsp;&nbsp;&nbsp;&nbsp;</label>{{form.topic_name}}<br>
+		<p>Select a File {{form.file}}</p>
+		<div class="header mt-3">
+		<input type="submit" class="btn btn-success btn-md" value="submit">
+		<a href='/cecform/' class="btn btn-outline-primary">Go Back</a>
+		</div>
+		</form>
+	</div>
+</div>
+{% endblock content %}

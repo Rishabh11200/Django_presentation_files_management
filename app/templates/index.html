@@ -1,0 +1,68 @@
+{% extends 'home.html' %}
+{% block homeactive %} active {% endblock homeactive %}
+{% block title %} Home Page {% endblock title %}
+{% block content %}
+
+  {% load static %}
+<div class="header" style="background:url({% static 'images/gls77.jpg' %})">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-md-12 text-center">
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="banner">
+      <div class="container py-5">
+        <div class="row text-center">
+           <div class="col-md-4">
+             <figure>
+              <img class="rounded-circle" src="{% static 'images/sonisir.jpg' %}" alt="Generic placeholder image" width="200" height="170">
+              <h2>Dr.R P Soni</h2>
+                <figcaption>
+                Prof R. P. Soni is currently working as Dean, Faculty of Computer Applications and IT, and also as Campus Director (Computer Education) at GLS University and manages MCA, MSc (IT), BCA, iMSc(IT) and Diploma programs on the campus for last 18 years.
+                </figcaption>
+            </figure> 
+          </div>
+
+          <div class="col-md-4">
+            <figure>
+               <img class="rounded-circle" src="{% static "images/ps.jpeg" %}" alt="Generic placeholder image" width="200" height="170">
+              <h2>Sudhir Nanavati</h2>
+                <figcaption>
+                Shri Sudhir Nanavati, is a multifaceted, magnanimous and a charismatic personality shouldering responsibility as President of GLS University and Executive Vice President of Gujarat Law Society. He is a senior counsel practicing in the apex courts of India including Supreme Court of India and the High court of Gujarat.
+                </figcaption>
+            </figure> 
+          </div>
+
+          <div class="col-md-4">
+            <figure>
+               <img class="rounded-circle" src="{% static "images/hod.jpg" %}" alt="Generic placeholder image" width="200" height="170">
+              <h2>Dr.Harshal Arolkar</h2>
+                <figcaption>
+                Dr. Harshal A Arolkar, is Associate Professor, at GLS University. At present he is working as Head of the Department of 2 years post graduate MSc (IT) Programme, offered by GLSU. An ardentpractitioner of open source technology and teacher he possesses more than 18 years of teaching experience in Computer Science.
+                </figcaption>
+            </figure> 
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}
+{% block footer %}
+     <section  class="footer dark" style="background-color: cyan;">
+      <div class="container py-2 text-black text-center">
+        <p>Copyright © 2020 - All contents copyright &copy; M. Sc. (IT), GLS University. All rights reserved.</p>
+         👉The A Team👈
+      </div>
+    </section>
+{% endblock footer %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

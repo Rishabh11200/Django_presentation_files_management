@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="container mt-3">
+<div class="row justify-content-center mb-3">
+	<div class="col-md-5">
+		<h4 class="text-center alert alert-info">Students Create Your Team</h4>
+		<div class="heading text-center">
+		<form method="POST">
+			{% csrf_token %}
+		{{form1.as_p}}
+		<input type="submit" class="btn btn-success btn-md" value="submit">
+		<a href='/displayteam/' class="btn btn-outline-primary">Student Details</a>
+		</form>
+	</div>
+	</div>
+</div>
+</div>
+{% endblock content %}

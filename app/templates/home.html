@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+  </head>
+  <body>
+ <nav class="navbar navbar-expand-lg "  style="background-color: cyan;">
+      <div class="container h-100">
+  <a class="navbar-brand" href="#"><img src="{% static 'images/logo_new.jpg' %}" class="img-fluid" alt=" image" style="height:40px;width:80px;"></a>
+
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+        <span><i class="fa fa-bars"></i></span>
+    </button>
+ 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto"> 
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {% if 'enrollment' in request.session %}
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Regsiter</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="/register/">Register</a>
+      </li>
+      {% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="/cecform/">CEC Upload</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact us</a>
+      </li>
+      {% if 'enrollment' in request.session %}
+      <li class="nav-item">
+        <a class="nav-link" href="/profile/">Profile</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/logout/">Logout</a>
+      </li>
+      {% endif %}
+    </ul>
+     </div>
+</nav>
+
+        {% block content %} 
+        {% endblock content %}  
+    <div class="footer">
+      {% block footer %}
+     <section  class="footer dark fixed-bottom" style="background-color: cyan;">
+      <div class="container py-2 text-black text-center">
+
+        <p>Copyright © 2020 -  All contents copyright &copy; M. Sc. (IT), GLS University. All rights reserved.</p>
+          👉The A Team👈
+      </div>
+    </section>
+    {% endblock footer %}
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

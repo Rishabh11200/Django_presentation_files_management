@@ -1,0 +1,34 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+<div class="container mt-3">
+<div class="row justify-content-center mb-3">
+	<div class="col-md-5">
+		<h4 class="text-center alert alert-info">Students Registeration Form</h4>
+		<form method="POST">
+			{% csrf_token %}
+		{{form|crispy}}
+		<input type="submit" class="btn btn-success btn-md" value="submit">
+		<a href='/login/' class="btn btn-outline-primary">Already Register Click here</a>
+		</form>
+	</div>
+</div>
+</div>
+{% endblock content %}
+{% block footer %}
+     <section  class="footer dark" style="background-color: cyan;">
+      <div class="container py-2 text-black text-center">
+        <p>Copyright © 2020 - All contents copyright &copy; M. Sc. (IT), GLS University. All rights reserved.</p>
+         👉The A Team👈
+      </div>
+    </section>
+{% endblock footer %}
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

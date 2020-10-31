@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+<form action="/register/" method="POST">
+	{% csrf_token %}
+	name <input type="text" name="name"><br>
+	enrollment <input type="text" name="eno"><br>
+	<label for="sem">Choose sem:</label>
+	<select name="sem" id="sem">
+	  <option value="7">7</option>
+	  <option value="8">8</option>
+	  <option value="9">9</option>
+	  <option value="10">10</option>
+	</select>  
+	email   <input type="text" name="email"><br>
+	password  <input type="text" name="password"><br>
+	mobile  <input type="text" name="mobile"><br>
+	batch <input type="text" name="batch"><br>
+	<label for="course">Choose course:</label>
+	<select name="course" id="course">
+	  <option value="imscit">Imscit</option>
+	  <option value="mscit">Mscit</option>
+	  <option value="pgdca">Pgdca</option>
+	</select> <br>
+	<input type="submit" name="submit" value="Register">
+</form>
+</body>
+</html>

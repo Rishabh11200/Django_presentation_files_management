@@ -1,0 +1,33 @@
+
+{% extends 'home.html' %}
+{% block content %}
+<div class="container mt-3">
+<div class="row justify-content-center mb-3">
+  <div class="col-md-12">
+    <h4 class="text-center alert alert-info">Students CEC Details</h4>
+    <table class="table">
+      <tr>
+        <th scope="col">No.</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Student</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Topic</th>
+            <th scope="col">File</th>
+            <th scope="col">Upload</th>
+          </tr>
+          {% for i in var %}
+          <tr>
+        <td>{{ i.team_no }}</td> 
+        <td>{{ i.team_name }}</td>
+        <td>{% for j in i.student.all %}{{j.name}} &nbsp; {% endfor %}</td>
+        <td>{{ i.subject }}</td>
+        <td>{% if i.topic_name != Null %}{{ i.topic_name }}{% else %}<i style="color:red">Pending... </i></td>{% endif %}
+        <td>{% if i.file.url != Null %}<a href="{{ i.file.url }}">{{i.file.name}}</a>{% else %}<i style="color:red">Pending... </i></td>{% endif %}
+        <td><a href="/upload/?id={{i.team_no}}">Upload</a></td>
+          </tr>
+        {% endfor %}
+        </table>
+    </div>
+  </div>
+</div>
+{% endblock content %}

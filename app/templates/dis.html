@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><center>
+{% for i in var %}
+{% for stu in i.student.all %} {{stu.name}}<br> {% endfor %}<br>
+{{i.team_name}}<br>
+{% endfor %}
+</center>
+</body>
+</html>

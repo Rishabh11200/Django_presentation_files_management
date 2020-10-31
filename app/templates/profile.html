@@ -1,0 +1,70 @@
+{% extends 'home.html' %}
+{% block content %}
+<main class="d-flex align-items-center" style="height:80vh;">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-4 offset-md-4">
+  					<div class="card">
+  						<div class="card-header text-center bg-primary text-white">
+  							<p class="h3">Student Profile</p>
+  						</div>
+  						<div class="card-body">
+  							<table class="table borderless">
+  <tbody>
+  	{% for i in var %}
+    <tr>
+      <th class="border-0">Name</th>
+      <td class="border-0">{{i.name}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Enrollement</th>
+      <td class="border-0">{{i.enrollment}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Semester</th>
+      <td class="border-0">{{i.semester}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Email</th>
+      <td class="border-0">{{i.email}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Password</th>
+      <td class="border-0">{{i.password}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Mobile</th>
+      <td class="border-0">{{i.mobile}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Course</th>
+      <td class="border-0">{{i.course}}</td>
+    </tr>
+    <tr>
+      <th class="border-0">Batch</th>
+      <td class="border-0">{{i.batch}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>  
+<div class="button text-center">						
+   <a href="/logout/" class="btn btn-primary">Logout</a>
+</div>
+						</form>
+  						</div>
+  					</div>
+
+  			</div>
+
+  		</div>
+  	</div>
+  	</main>
+{% endblock content %}
+{% block footer %}
+     <section  class="footer dark" style="  background-color: cyan;">
+      <div class="container py-2 text-black text-center">
+        <p>Copyright © 2020 - All contents copyright &copy; M. Sc. (IT), GLS University. All rights reserved.</p>
+         👉The A Team👈
+      </div>
+    </section>
+{% endblock footer %}
